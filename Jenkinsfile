@@ -7,6 +7,8 @@ pipeline {
         stage('GitCheck') {
             steps {
                 sh "git --version"
+				sh "whoami"
+				sh "python --version"
             }
         }
         stage('Checkout') {
@@ -16,7 +18,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "python test.py"
+                sh "sudo python test.py"
             }
         }
         stage('Success') {
