@@ -7,8 +7,7 @@ pipeline {
         stage('GitCheck') {
             steps {
                 sh "git --version"
-				sh "whoami"
-				sh "python --version"
+		sh "whoami"
             }
         }
         stage('Checkout') {
